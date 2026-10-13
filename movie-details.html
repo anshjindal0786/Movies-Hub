@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details - Movies-Hub</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-indigo-500 selection:text-white font-sans relative overflow-x-hidden">
+    
+    <!-- Background Glow Effect (Optional, adds a nice touch) -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-64 bg-indigo-500/10 blur-[100px] -z-10 pointer-events-none"></div>
+
+    <!-- Header / Navigation -->
+    <header class="w-full max-w-7xl mx-auto px-6 pt-8 pb-4 z-10">
+        <nav>
+            <a href="index.html" class="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition-colors font-medium group bg-slate-800/50 px-4 py-2 rounded-xl border border-slate-700/50 hover:border-indigo-500/30 w-max">
+                <svg class="w-5 h-5 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Back to Search
+            </a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 w-full max-w-7xl mx-auto px-6 py-4 mb-10 z-10">
+        <!-- The JS will inject the movie details directly into this container -->
+        <div id="movieDetails" class="w-full min-h-[60vh] flex justify-center items-center">
+            
+            <!-- Default Loading State -->
+            <div class="flex flex-col items-center justify-center py-16 gap-3">
+                <div class="w-12 h-12 border-4 border-indigo-500/20 border-t-indigo-500 rounded-full animate-spin"></div>
+                <p class="text-slate-400 font-medium">Fetching movie details...</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center text-sm text-slate-500 border-t border-slate-800/80 bg-slate-900/50 backdrop-blur-sm z-10 mt-auto">
+        <p>© Movies-Hub. Powered by OMDb API.</p>
+    </footer>
+
+    <!-- Make sure the filename here matches your JS file for this page -->
+    <script src="movie-details.js"></script>
+</body>
+</html>

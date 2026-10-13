@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies-Hub</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+ 
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-indigo-500 selection:text-white font-sans">
+    
+   <header class="w-full max-w-6xl mx-auto px-6 pt-10 pb-6">
+        <h1 class="text-4xl font-extrabold text-center tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400 mb-8">
+            Explore Movies and Series
+        </h1>
+        <div >
+        <form id="movieForm" class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto bg-slate-800 p-2 rounded-2xl shadow-xl border border-slate-700/50">
+            <input id="movieInput" type="text" placeholder="Search for movies..."
+            class="flex-1 bg-transparent px-4 py-3 text-slate-100 placeholder-slate-400 focus:outline-none rounded-xl text-base">
+            <button type="submit" class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-6 py-3 rounded-xl transition duration-200 shadow-md hover:shadow-indigo-500/25 cursor-pointer" >Search</button>
+        </form>
+    </div>
+
+   </header>
+
+   <main class="flex-1 w-full max-w-7xl mx-auto px-6 py-8">
+        <div id="movieHub" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Movie cards from index.js will render here -->
+        </div>
+
+    
+   </main>
+
+   <footer class="py-6 text-center text-sm text-slate-500 border-t border-slate-800">
+        <p>© Movies-Hub. Powered by OMDb API.</p>
+    </footer>
+    
+    
+
+    <script src="index.js"></script>
+</body>
+</html>
